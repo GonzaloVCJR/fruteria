@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;1,300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    min-height: 100vh;
+}
+
+#root {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loading {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: 
+        radial-gradient(farthest-side,#e7e6ec 94%,#0000) top/5px 5px no-repeat,
+        conic-gradient(#0000 30%,#f7f6fc);
+    -webkit-mask: radial-gradient(farthest-side,#0000 calc(100% - 5px),#000 0);
+    animation: s3 1s infinite linear;
+}
+
+@keyframes s3 { 
+    100% { transform: rotate(1turn) }
+}
+
+.skeleton {
+    width: 98%;
+}

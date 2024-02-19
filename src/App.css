@@ -1,0 +1,479 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,300italic,700,700italic");
+/* @import url("https://cdnjs.cloudflare.com/ajax/libs/milligram/1.4.1/milligram.css"); */
+/* * {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+} */
+
+:root{
+  font-size: 16px;
+}
+
+.App {
+  /* text-align: center; */
+  height: 100vh;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(to bottom right, rgb(239, 253, 111), rgb(165, 12, 253));
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 100vh;
+  max-height: fit-content;
+}
+
+section{
+  min-height: 67vh;
+}
+
+code {
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: 600;
+  color: green;
+  background: #5e5c5c3f;
+  padding: 0 5px;
+  border-radius: 3px;
+}
+code, a{
+  margin: 0 5px;
+}
+
+.warning{
+  margin: 0 auto;
+  padding: 10px 0;
+  border-radius: 5px;
+  border: 1px solid orangered;
+  color: whitesmoke;
+  text-shadow: 1px 1px rgba(88, 24, 0, 0.507);
+  background-color: rgba(255, 166, 0, 0.2);
+  width: 300px;
+  text-align: center;
+}
+
+
+
+.App-logo, .logo {
+  height: 4vmin;
+  margin: 0 8px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+  animation: App-logo-spin infinite 10s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  padding: 0 1.2rem;
+  min-height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: lightseagreen;
+}
+
+.App-header div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nav{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+}
+
+nav li{
+  all: unset;
+  margin: 0 3rem 0 0;
+  font-style: uppercase;
+}
+li a{
+  text-decoration: none;
+  color: lightseagreen;
+
+  &:hover{
+    color: Tomato;
+  }
+}
+
+/* Esta es la clase que se activa en el header cuando haces click a una ruta */
+.active{
+  color: orangered;
+  font-weight: bolder;
+}
+
+/* Checks y labels para responsive*/
+
+#check{
+  display: none;
+}
+
+.mostrar-menu, .esconder-menu{
+  font-size: 2rem;
+  display: none;
+}
+
+/* fin Checks y labels para responsive*/
+
+#spinner{
+  width: 50px;
+}
+
+.button, button, input[type='button'], input[type='reset'], input[type='submit'] {
+  background-color: #9b4dca;
+  border: 0.1rem solid #9b4dca;
+  border-radius: 0.4rem;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 700;
+  height: 2.2rem;
+  padding: 0 2rem;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.button-delete {
+  background: darkred ;
+}
+
+.button-small {
+  font-size: .8rem;
+  height: 2.8rem;
+  line-height: 2.8rem;
+  padding: 0 1.5rem;
+}
+
+h1, h2, h3, h4 {
+  font-weight: 500;
+}
+
+p, span, strong {
+  font-size: larger;
+}
+
+em {
+  font-size: medium;
+}
+
+.ocultar {
+  display: none;
+}
+main{
+  height: fit-content;
+}
+.container {
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 0 1.2rem;
+  gap: 2rem;
+  display: flex;
+  flex-direction:row;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  background: rgba(240, 248, 255, 0.8);
+  backdrop-filter: blur(10px);
+  padding-bottom: .8rem;
+  box-shadow: 0px 10px 15px  5px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(211, 211, 211, 0.384);
+  border-radius: 8px;
+  height: 15rem;
+  width: 11rem;
+  color: #5e5c5c;
+  font-family: 'Roboto';
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.card:hover {
+  transition: .1s ease-in;
+  box-shadow: 5px 20px 60px rgba(211, 211, 211, 0.519);
+}
+
+.card .card-image {
+  text-align: center;
+  font-size: 4rem;
+  display: block;
+  width: 1fr;
+}
+
+.card .card-name {
+  text-align: center;
+  font-size: 1.6rem;
+  font-weight: 700;
+  display: block;
+  width: 1fr;
+}
+
+.card .card-price {
+  text-align: center;
+  font-size: 1.4rem;
+  font-weight: 500;
+  display: block;
+  width: 1fr;
+}
+
+.card .card-button {
+  text-align: center;
+  display: block;
+}
+
+.button-add {
+  border-radius: 10px;
+  border: 1px solid blueviolet ;
+  padding: 0 1.8rem;
+  font-family: 'Roboto';
+  font-weight: bold;
+  color: white;
+}
+
+.card .card-button button {
+  margin-top: 10px;
+  font-size: 20px ;
+}
+
+.card .card-button .disabled {
+  background-color: lightgray ;
+  color: whitesmoke ;
+}
+
+.card .card-button button:active {
+  background: darkmagenta ;
+  color: white ;
+}
+
+.sin-stock {
+  filter: grayscale(100%) opacity(40%); 
+}
+
+.card-error {
+  box-shadow: 0px 6px 20px rgba(255, 0, 0, 0.147);
+  border: 1px solid darkred;
+  border-radius: 6px;
+  padding: 40px;
+  color: red;
+}
+
+.centrar-div {
+  text-align: center;
+}
+
+.formulario {
+  padding: 40px;
+  border-radius: 10px;
+  background-color: rgba(90, 0, 139, 0.373);
+  box-shadow: 5px 10px 40px lightgray;
+}
+
+.btn-checkout {
+  background-color: rgba(0, 139, 139, 0.175);
+  border-radius: 50%;
+  margin-right: 10px;
+  margin-top: 10px;
+  display: inline;
+  padding: 10px;
+  float: right;
+  height: 70px;
+  width: 70px;
+}
+
+.btn-checkout img {
+  width: 60px;
+}
+
+.btn-checkout:hover {
+  box-shadow: 4px 4px 10px ligthgray;
+  transition: 0.17s ease-in;
+}
+
+.btn-checkout:active {
+  transition: 0.3s ease-out;
+  filter: grayscale(100%)
+}
+
+.form-checkout {
+  background-color: rgba(139, 0, 139, 0.102);
+  border-radius: 5px;
+  margin: 0 auto;
+  padding: 20px;
+  width: 80%;
+}
+
+.canastaDeFrutas{
+  margin: 30px;
+  position: relative;
+  left: 50%;
+  transform: translate(-100%);
+}
+
+table{
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+thead tr {
+  background-color: darkmagenta;
+  color: white;
+}
+
+#tablehead {
+  padding: 10px;
+}
+
+
+tbody tr:nth-child(even) {
+  background: rgba(173, 216, 230, 0.252) ;
+  border-top: 1px solid white;
+  border-bottom: 1px solid white;
+}
+
+.centrar {
+  text-align: center;
+}
+
+
+#btnComprar:hover, .btn-eliminar:hover {
+  background-color: darkviolet;
+}
+
+#btnComprar:active, .btn-eliminar:active{
+  background-color: black;
+}
+
+/*  CONTROLO MEDIA SCREENS Y ELEMENTOS EN PANTALLA
+  ESTO APLICA SOLAMENTE A LOS ELEMENTOS DE CHECKOUT.HTML */
+
+@media screen and (width <= 420px) {
+
+  .form-checkout {
+      padding: 8px;
+      width: 100%;
+  }
+
+  div.form-checkout p {
+      font-size: 14px;
+      font-weight: 700;
+  }
+
+  table {
+      margin: 0 auto;
+      width: 100% ;
+      margin-bottom: 60px;
+  }
+}
+
+@media screen and (width <= 767px) {
+  .mostrar-menu, .esconder-menu{
+    font-size: 2rem;
+    display: block;
+  }
+
+  nav{
+    position: fixed;
+    background: linear-gradient(to bottom,rgb(34, 34, 34)5%, rgba(34, 34, 34, 0.95)50%,rgba(34, 34, 34, 0.6) 90%, transparent 100%);
+    height: 100vh;
+    width: 100%;
+    top: 0;
+    right: -100%;
+    z-index: 100;
+    transition: 0.8s;
+    display: flex;
+    flex-direction: column;
+  }
+  nav ul{
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+  }
+  nav ul li,.btnUsuario{
+    margin: 1.4rem auto;
+    font-size: 1.6rem;
+    font-weight: 700;
+    text-align: center;
+  }
+
+  .btnUsuario{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.4rem;
+  }
+
+  .btnSesion{
+    margin-bottom: 1.4rem!important;
+  }
+  #check:checked ~ nav{
+    position:fixed;
+    right: 0;
+  }
+  .esconder-menu{
+    position: absolute;
+    top: 2%;
+    right: 4%;
+  }
+
+  .form-checkout {
+      padding: 10px;
+      width: 100%;
+  }
+
+  table {
+      margin: 0 auto;
+      width: 100%;
+      margin-bottom: 60px;
+  }
+}
+
+@media screen and (width >= 768px) {
+  div.form-checkout {
+      padding: 30px;
+      max-width: 600px;
+  }
+
+  table {
+      margin: 0 auto;
+      max-width: 600px;
+      margin-bottom: 80px;
+  }
+
+  td{
+    padding: 15px 50px;
+  }
+}
+
+@media (max-width: 900px) {
+  :root{
+    font-size: 12px;
+  }
+  nav li{
+    all: unset;
+    margin: 0 1rem 0 0;
+    font-style: uppercase;
+  }
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
